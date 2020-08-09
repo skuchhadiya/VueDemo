@@ -12,11 +12,11 @@
 </template>
 
 <script>
-import HeaderBarBrand from '@/components/header-bar-brand';
-import HeaderBarLinks from '@/components/header-bar-links';
+import HeaderBarBrand from "@/components/header-bar-brand";
+import HeaderBarLinks from "@/components/header-bar-links";
 
 export default {
-  name: 'HeaderBar',
-  components: { HeaderBarBrand, HeaderBarLinks },
+  name: "HeaderBar",
+  components: { HeaderBarBrand, HeaderBarLinks }
 };
 </script>

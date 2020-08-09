@@ -8,7 +8,7 @@
       "type": "chrome",
       "request": "launch",
       "name": "Vue: Chrome",
-      "url": "http://localhost:9626",
+      "url": "https://localhost:44307",
       "webRoot": "${workspaceFolder}/src",
       "breakOnLoad": true,
       "sourceMapPathOverrides": {

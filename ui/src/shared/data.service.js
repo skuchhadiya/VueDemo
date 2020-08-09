@@ -1,10 +1,11 @@
-import * as axios from 'axios';
+import * as axios from "axios";
 
-import { API } from './config';
+import { API } from "./config";
 
+// for time constraint i will assume all service working correctly so not adding test
 const addUser = async function(user) {
   try {
-    const response = await axios.post('api/User', user);
+    const response = await axios.post("api/User", user);
     const addedUser = user;
     addedUser.id = response.data;
     return addedUser;
@@ -29,5 +30,5 @@ const getProducts = async function(terms) {
 
 export const dataService = {
   addUser,
-  getProducts,
+  getProducts
 };
