@@ -22,7 +22,12 @@
             </div>
             <div class="field">
               <label class="label" for="email">Email</label>
-              <input type="email" class="input" name="email" v-model="user.email" />
+              <input
+                type="email"
+                class="input"
+                name="email"
+                v-model="user.email"
+              />
             </div>
           </div>
         </div>
@@ -38,27 +43,26 @@
 </template>
 
 <script>
-import { mapActions } from 'vuex';
+import { mapActions } from "vuex";
 
 export default {
-  name: 'User',
+  name: "User",
   data() {
     return {
-      user: { ...this.$store.state.user },
+      user: { ...this.$store.state.user }
     };
   },
   computed: {
     getUser() {
       return this.$store.state.user;
-    },
+    }
   },
   methods: {
-    ...mapActions(['addUserAction']),
-
+    ...mapActions(["addUserAction"]),
     async saveAndContinue() {
       await this.addUserAction(this.user);
-      this.$router.push({ name: 'PropertyDetails' });
-    },
-  },
+      this.$router.push({ name: "PropertyDetails" });
+    }
+  }
 };
 </script>

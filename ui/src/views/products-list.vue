@@ -7,7 +7,7 @@
           <p class="card-header-title">{{ title }}</p>
         </header>
         <div class="card-content">
-          <div class="content">
+          <div class="content" v-if="products.length > 0">
             <table>
               <thead>
                 <tr>
@@ -27,6 +27,9 @@
               </tbody>
             </table>
           </div>
+          <div class="content" v-if="products.length === 0">
+            <p id="notFound">Products not found</p>
+          </div>
         </div>
         <footer class="card-footer">
           <button class="link card-footer-item cancel-button" @click="onBack()">
@@ -41,18 +44,18 @@
 
 <script>
 export const mortgageType = [
-  { Key: 'Variable', Value: 0 },
-  { Key: 'Fixed', Value: 1 },
+  { Key: "Variable", Value: 0 },
+  { Key: "Fixed", Value: 1 }
 ];
 export default {
-  name: 'ProductList',
+  name: "ProductList",
   computed: {
     title() {
       return (
         this.user.firstName +
-        '   Property Value :' +
+        "   Property Value :" +
         this.searchTerms.propertyValue +
-        '   Mortgage Amount :' +
+        "   Mortgage Amount :" +
         this.searchTerms.mortgageAmount
       );
     },
@@ -65,17 +68,17 @@ export default {
     },
     products() {
       return this.$store.state.products;
-    },
+    }
   },
 
   methods: {
     onBack() {
-      this.$router.push({ name: 'PropertyDetails' });
+      this.$router.push({ name: "PropertyDetails" });
     },
 
     getMortgageType(val) {
-      return mortgageType.find((x) => x.Value === val).Key;
-    },
-  },
+      return mortgageType.find(x => x.Value === val).Key;
+    }
+  }
 };
 </script>

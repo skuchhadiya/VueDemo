@@ -33,7 +33,11 @@
             <i class="fas fa-undo"></i>
             <span>Back</span>
           </button>
-          <button class="link card-footer-item" @click="getProducts()">
+          <button
+            type="submit"
+            class="link card-footer-item"
+            @click="getProducts()"
+          >
             <i class="fas fa-search"></i>
             <span>Find Products</span>
           </button>
@@ -44,31 +48,31 @@
 </template>
 
 <script>
-import { mapActions } from 'vuex';
+import { mapActions } from "vuex";
 
 export default {
-  name: 'PropertyDetails',
+  name: "PropertyDetails",
 
   data() {
     return {
-      searchTerms: { ...this.$store.state.searchTerms },
+      searchTerms: { ...this.$store.state.searchTerms }
     };
   },
   computed: {
     user() {
       return this.$store.state.user;
-    },
+    }
   },
   methods: {
-    ...mapActions(['getProductsAction']),
+    ...mapActions(["getProductsAction"]),
     onBack() {
-      this.$router.push({ name: 'User' });
+      this.$router.push({ name: "User" });
     },
     async getProducts() {
       this.searchTerms.id = this.user.id;
       await this.getProductsAction(this.searchTerms);
-      this.$router.push({ name: 'ProductList' });
-    },
-  },
+      this.$router.push({ name: "ProductList" });
+    }
+  }
 };
 </script>
