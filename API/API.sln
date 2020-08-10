@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.1145
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30320.27
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "API", "API\API.csproj", "{6D559D87-B39B-4379-B276-69CB4B11EC41}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Podium.Core", "Podium.Core\Podium.Core.csproj", "{2D958974-7FE8-4543-916C-EED08F2A47FD}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Podium.Data", "Podium.Data\Podium.Data.csproj", "{583EB6CA-3172-442C-A4C5-C55BDE2136D8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Podium.Core.Test", "Podium.Core.Test\Podium.Core.Test.csproj", "{AC31A144-CDD3-4B7A-B1A4-FCAD6030DACF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{583EB6CA-3172-442C-A4C5-C55BDE2136D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{583EB6CA-3172-442C-A4C5-C55BDE2136D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{583EB6CA-3172-442C-A4C5-C55BDE2136D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC31A144-CDD3-4B7A-B1A4-FCAD6030DACF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC31A144-CDD3-4B7A-B1A4-FCAD6030DACF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC31A144-CDD3-4B7A-B1A4-FCAD6030DACF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC31A144-CDD3-4B7A-B1A4-FCAD6030DACF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

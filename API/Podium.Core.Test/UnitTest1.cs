@@ -1,6 +1,6 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace APITest
+namespace Podium.Core.Test
 {
     [TestClass]
     public class UnitTest1

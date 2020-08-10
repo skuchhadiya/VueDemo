@@ -12,22 +12,25 @@ namespace API.Factory
     public class ProductFactory : IProductFactory
     {
         private readonly IProduct _products;
-        private readonly IProductFactory _factory;
+        private readonly decimal _ltv;
+        private readonly IProductFactory _factory60;
+        private readonly IProductFactory _factory90;
 
         public ProductFactory(IProduct products, decimal ltv)
         {
             _products = products;
-            
-            if (ltv < 60)
-                _factory = new Product60(_products);
-
-            else if (ltv < 90)
-                _factory = new Product90(_products);
+            this._ltv = ltv;
+            _factory60 = new Product60(_products);
+            _factory90 = new Product90(_products);
         }
         public IEnumerable<Product> GetProducts()
         {
-            if(_factory !=null)
-                return _factory.GetProducts();
+            if (_ltv < 60)
+            {
+                return (_factory60.GetProducts().Concat(_factory90.GetProducts()));
+            }
+            else if (_ltv < 90)
+                return  _factory90.GetProducts();
             return null;
         }
     }

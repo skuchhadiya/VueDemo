@@ -38,14 +38,6 @@ namespace API.Services
             if (IsUnder18)
                 return null;
 
-            //possible to add if here 
-            //if (ltv < 60)
-            //if (ltv < 90)
-            //for simplicity
-
-            //factory method to retrive related products as per LTV ratio
-            //This is useful when we might need further filter on mortgage type etc
-
             IProductFactory factory = new ProductFactory(_products, ltv);
             
             return factory.GetProducts();

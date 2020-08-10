@@ -14,9 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\API\API.csproj" />
     <ProjectReference Include="..\Podium.Core\Podium.Core.csproj" />
-    <ProjectReference Include="..\Podium.Data\Podium.Data.csproj" />
   </ItemGroup>
 
 </Project>
